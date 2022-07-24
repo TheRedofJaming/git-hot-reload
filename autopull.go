@@ -118,9 +118,9 @@ func gitPull() {
 }
 func Flags() {
 	flag.StringVar(&ENV, "e", ".", "Set the cwd for the reload-server.")
-	flag.StringVar(&APP, "a", "", "The programme the reload-server watches. Arguments should be listed afterwards.")
+	flag.StringVar(&APP, "a", "", "The programme executed by the reload-server.")
 	flag.StringVar(&PORT, "p", "4000", "The port the server listenes to.")
-	flag.StringVar(&ARGS, "args", "", "Arguments for the programme in one string.")
+	flag.StringVar(&ARGS, "args", "", "Arguments for the executable in one string.")
 	flag.Parse()
 	PORT = strings.Join([]string{":", PORT}, "")
 }
